@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/news_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/SectionAuthorDateStyle"
+        android:id="@+id/section_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/section_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/TitleTextViewStyle"
+        android:id="@+id/web_title_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/web_title"
+        app:layout_constraintEnd_toEndOf="@+id/section_view"
+        app:layout_constraintStart_toStartOf="@+id/section_view"
+        app:layout_constraintTop_toBottomOf="@+id/section_view" />
+
+    <TextView
+        android:id="@+id/publication_date_view"
+        style="@style/DateTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/publication_date"
+        app:layout_constraintBaseline_toBaselineOf="@+id/read_more_view"
+        app:layout_constraintEnd_toEndOf="@+id/web_title_view"
+        app:layout_constraintStart_toEndOf="@+id/read_more_view" />
+
+    <TextView
+        android:id="@+id/read_more_view"
+        style="@style/AuthorTextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/author"
+        app:layout_constraintEnd_toStartOf="@+id/publication_date_view"
+        app:layout_constraintStart_toStartOf="@+id/web_title_view"
+        app:layout_constraintTop_toBottomOf="@+id/web_title_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
